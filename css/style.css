@@ -1,3 +1,10 @@
+/*
+  Breakpoints:
+  - Laptop : max-width 1366px
+  - Tablet : max-width 768px
+  - Mobile : max-width 450px
+*/
+
 :root {
   --primary: #8b9a6e;
   --bg: #eeeeee;
@@ -282,13 +289,14 @@ footer h3 span {
   background: none;
 }
 
-.contact .btn {
+.contact .row form .btn {
   margin-top: 1.5rem;
   width: 10rem;
   height: 4rem;
   color: var(--font);
   border-radius: 0.5rem;
   box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  cursor: pointer;
 }
 
 .contact .btn:hover {
@@ -303,10 +311,10 @@ footer {
 }
 
 footer .footer-title {
-  margin-bottom: 1rem;
+  display: none;
 }
 
-.socials {
+footer .socials {
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -316,8 +324,6 @@ footer .footer-title {
   top: 50%;
   transform: translateY(-50%);
   flex-direction: column;
-  gap: 0.6rem;
-  margin: 0;
   padding: 0.8rem 0.5rem;
   background-color: #eee;
   border: 1px solid #413333;
@@ -325,7 +331,7 @@ footer .footer-title {
   z-index: 90;
 }
 
-.socials a {
+footer .socials a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -338,13 +344,9 @@ footer .footer-title {
     transform 0.3s;
 }
 
-.socials a:hover {
+footer .socials a:hover {
   background-color: var(--primary);
   transform: translateY(-3px);
-}
-
-footer .footer-title {
-  display: none;
 }
 
 footer #cp-right {
@@ -429,6 +431,27 @@ footer #cp-right {
 
   .contact .row {
     flex-wrap: wrap;
+  }
+
+  .contact .row form {
+    padding-top: 0;
+  }
+
+  footer .socials {
+    position: static;
+    right: auto;
+    bottom: auto;
+    margin: 1rem auto 0;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    margin-top: 4rem;
+  }
+
+  footer .footer-title {
+    display: block;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
   }
 }
 
