@@ -9,6 +9,7 @@
   --primary: #8b9a6e;
   --bg: #eeeeee;
   --font: #413333;
+  --secondary: #757d6f;
 }
 
 * {
@@ -299,7 +300,7 @@ footer h3 span {
   cursor: pointer;
 }
 
-.contact .btn:hover {
+.contact .row form .btn:hover {
   background-color: var(--primary);
   color: var(--bg);
 }
@@ -346,7 +347,37 @@ footer .socials a {
 
 footer .socials a:hover {
   background-color: var(--primary);
-  transform: translateY(-3px);
+  color: var(--bg);
+  width: 4rem;
+  height: 4rem;
+  transform: translateY(-4px);
+}
+
+footer .links {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer .links a {
+  color: var(--font);
+  padding: 1rem;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  transition:
+    background-color 0.2s,
+    transform 0.3s;
+}
+
+footer .links a:hover {
+  text-align: center;
+  color: #eeeeee;
+  background-color: var(--primary);
+  width: 8rem;
+  height: 4rem;
+  transform: translateY(-15px);
 }
 
 footer #cp-right {
@@ -446,6 +477,7 @@ footer #cp-right {
     display: flex;
     flex-direction: row;
     margin-top: 4rem;
+    background: none;
   }
 
   footer .footer-title {
