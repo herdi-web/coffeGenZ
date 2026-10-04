@@ -96,11 +96,11 @@ body {
 /* navbar search form */
 .navbar .search-form {
   position: absolute;
-  top: 25%;
-  left: 19%;
+  top: 110%;
+  left: 20%;
   background-color: #fff;
-  width: 23rem;
-  height: 2.5rem;
+  width: 30rem;
+  height: 3rem;
   display: flex;
   align-items: center;
   transform: scaleY(0);
@@ -213,12 +213,14 @@ body {
 /* about section */
 .about,
 .menu,
+.products,
 .contact {
   padding: 7rem 7% 1.4rem;
 }
 
 .about h2,
 .menu h2,
+.products h2,
 .contact h2 {
   text-align: center;
   font-size: 2.6rem;
@@ -227,6 +229,7 @@ body {
 
 .about h2 span,
 .menu h2 span,
+.products h2 span,
 .contact h2 span,
 footer h3 span {
   color: var(--primary);
@@ -266,12 +269,14 @@ footer h3 span {
 /* menu section */
 
 .menu h2,
-.contact h2 {
+.contact h2,
+.products h2 {
   margin-bottom: 1rem;
 }
 
 .menu p,
-.contact p {
+.contact p,
+.products p {
   text-align: center;
   max-width: 40rem;
   margin: auto;
@@ -304,6 +309,36 @@ footer h3 span {
 
 .menu .row .menu-card .menu-card-title {
   margin: 1rem auto 0.5rem;
+}
+
+/* products section */
+
+.products .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.products .row .product-card {
+  text-align: center;
+  border: 1px solid #666;
+  padding: 2rem;
+}
+
+.products .row .product-card .product-icon {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.products .row .product-card .product-icon a {
+  width: 4rem;
+  height: 4rem;
+  color: var(--font);
+  margin: 0.3rem;
+  border: 1px solid #666;
+  border-radius: 50%;
 }
 
 /* contact section */
@@ -541,7 +576,7 @@ footer #cp-right {
 
   .navbar .search-form {
     width: 70%;
-    height: 70%;
+    left: 15%;
   }
 }
 
