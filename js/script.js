@@ -5,8 +5,9 @@ const searchBox = document.querySelector("#search-box");
 const shoppingCart = document.querySelector(".shopping-list");
 
 //ketika hamburger menu di klik
-document.querySelector("#hamburger-menu").onclick = () => {
+document.querySelector("#hamburger-menu").onclick = (e) => {
   navbarNav.classList.toggle("active");
+  e.preventDefault();
 };
 
 // ketika search di klik
