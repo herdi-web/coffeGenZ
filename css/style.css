@@ -320,25 +320,59 @@ footer h3 span {
   margin-top: 4rem;
 }
 
-.products .row .product-card {
+.products .product-card {
   text-align: center;
   border: 1px solid #666;
   padding: 2rem;
 }
 
-.products .row .product-card .product-icon {
+.products .product-icon {
   display: flex;
   justify-content: center;
   gap: 0.5rem;
 }
 
-.products .row .product-card .product-icon a {
+.products .product-icon a {
   width: 4rem;
   height: 4rem;
   color: var(--font);
   margin: 0.3rem;
   border: 1px solid #666;
   border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products .product-icon a:hover {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.products .product-image {
+  padding: 1rem 0;
+}
+
+.products .product-image img {
+  height: 25rem;
+}
+
+.products .product-content h3 {
+  font-size: 2rem;
+}
+
+.products .product-stars {
+  font-size: 1.7rem;
+  padding: 0.8rem;
+  color: var(--primary);
+}
+
+.products .product-stars .star-full {
+  fill: var(--primary);
+}
+
+.products .product-price span {
+  text-decoration: line-through;
 }
 
 /* contact section */
