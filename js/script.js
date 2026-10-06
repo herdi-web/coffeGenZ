@@ -42,6 +42,54 @@ document.addEventListener("click", function (e) {
   }
 });
 
+// validasi form
+const form = document.querySelector("form");
+const inputName = document.querySelector("#input-name");
+const inputEmail = document.querySelector("#input-email");
+const inputPhone = document.querySelector("#input-phone");
+const errorName = document.querySelector("#error-name");
+const errorEmail = document.querySelector("#error-email");
+const errorPhone = document.querySelector("#error-phone");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // cek nama kosong
+  let isValid = true;
+  if (inputName.value.trim() === "") {
+    errorName.textContent = "Nama Wajib Diisi!";
+  } else if (!/^[a-zA-Z\s]+$/.test(inputName.value)) {
+    errorName.textContent = "Nama cuma boleh huruf";
+    isValid = false;
+  } else {
+    errorName.textContent = "";
+  }
+  // cek email kosong
+  if (inputEmail.value.trim() === "") {
+    errorEmail.textContent = "Email wajib diisi";
+    isValid = false;
+  } else {
+    errorEmail.textContent = "";
+  }
+
+  // cek nomor telpon kosong & formatnya
+  if (inputPhone.value.trim() === "") {
+    errorPhone.textContent = "Nomor telpon wajib diisi";
+    isValid = false;
+  } else if (!/^[0-9]+$/.test(inputPhone.value)) {
+    errorPhone.textContent = "Nomor telpon cuma boleh angka";
+    isValid = false;
+  } else {
+    errorPhone.textContent = "";
+  }
+
+  // kalau semua valid, baru tampilin alert sukses
+  if (isValid) {
+    alert("Thanks for order ❤️");
+    form.reset();
+  }
+});
+
 // modal box
 const itemDetailModals = document.querySelector("#item-detail-modal");
 const itemDetailButtons = document.querySelectorAll(".item-detail-button");

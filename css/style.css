@@ -454,6 +454,10 @@ footer h3 span {
   text-align: center;
 }
 
+.contact .row form span {
+  color: rgb(255, 0, 0);
+}
+
 .contact .row form .input-group {
   display: flex;
   align-items: center;

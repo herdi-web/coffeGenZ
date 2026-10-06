@@ -364,23 +364,26 @@
           class="map"
         ></iframe>
 
-        <form action="">
+        <form action="/dummy">
           <div class="input-group">
             <i data-feather="user"></i>
-            <input type="text" placeholder="nama" />
+            <input type="text" placeholder="nama" id="input-name"/>
+             <span class="error-message" id="error-name"></span>
           </div>
 
           <div class="input-group">
             <i data-feather="mail"></i>
-            <input type="email" placeholder="email" />
+            <input type="email" placeholder="email" id="input-email"/>
+             <span class="error-message" id="error-email"></span>
           </div>
 
           <div class="input-group">
             <i data-feather="phone"></i>
-            <input type="text" placeholder="nomor telpon" />
+            <input type="text" placeholder="nomor telpon" id="input-phone"/>
+             <span class="error-message" id="error-phone"></span>
           </div>
 
-          <button type="submit" class="btn">Kirim Pesan</button>
+          <button type="submit" class="btn" id="form-submit">Kirim Pesan</button>
         </form>
     </section>
     <!-- kontak section end-->
