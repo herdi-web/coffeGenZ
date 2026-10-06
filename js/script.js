@@ -49,13 +49,16 @@ const itemDetailButtons = document.querySelectorAll(".item-detail-button");
 const modalImage = document.querySelector("#modal-image");
 const modalTitle = document.querySelector("#modal-title");
 const modalDescription = document.querySelector("#modal-description");
+const modalStars = document.querySelector("#modal-stars");
 const modalPrice = document.querySelector("#modal-price");
 
 itemDetailButtons.forEach((btn) => {
   btn.onclick = (e) => {
+    console.log("1. tombol diklik");
     const image = btn.dataset.image;
     const title = btn.dataset.title;
     const description = btn.dataset.description;
+    const rating = parseInt(btn.dataset.rating);
     const price = btn.dataset.price;
 
     modalImage.src = image;
@@ -63,6 +66,30 @@ itemDetailButtons.forEach((btn) => {
     modalDescription.textContent = description;
     modalPrice.textContent = price;
 
+    console.log("2. data yang kebaca", {
+      image,
+      title,
+      description,
+      rating,
+      price,
+    });
+
+    // create rating
+
+    modalStars.innerHTML = "";
+    for (let i = 1; i <= 5; i++) {
+      const star = document.createElement("i");
+      star.setAttribute("data-feather", "star");
+      if (i <= rating) {
+        star.classList.add("star-full");
+      }
+      modalStars.appendChild(star);
+    }
+    console.log("3. isi modalStars sebelum feather:", modalStars.innerHTML);
+
+    feather.replace();
+
+    console.log("4. modal mau di tampilkan");
     itemDetailModals.style.display = "flex";
     e.preventDefault();
   };

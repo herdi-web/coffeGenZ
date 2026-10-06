@@ -410,13 +410,13 @@ footer h3 span {
   font-size: 2rem;
 }
 
-.products .product-stars {
+.product-stars {
   font-size: 1.7rem;
   padding: 0.8rem;
   color: var(--primary);
 }
 
-.products .product-stars .star-full {
+.star-full {
   fill: var(--primary);
 }
 
@@ -631,6 +631,14 @@ footer #cp-right {
 }
 
 /* modal box end */
+
+/* items detail modal start */
+
+.product-content #modal-description {
+  margin: 1.5rem;
+}
+
+/* items detail modal end */
 
 /* modal animation */
 
